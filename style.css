@@ -1,0 +1,172 @@
+.container
+{
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+#appsdevp-custsdevpconts h2
+{
+  font-size: 38px;
+  font-weight: 650;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  font-family: "Rubik", serif;
+  color: #275e97;
+}
+
+#appsdevp-custsdevpconts ul li
+{
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+  line-height: 35px;
+}
+
+.appsdevp-name{
+  text-align: left;
+  position: relative;
+  font-size: 21px;
+  padding-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  line-height: 42px;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+/* flippin */
+.flip-container {
+  perspective: 1000;
+  margin:auto;
+  transform:rotateZ(0deg);
+  width: 100%;
+  
+ }
+  /*.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg)rotateZ(10deg);
+  }*/
+
+.flip-container, .front, .back {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*-webkit-box-shadow: 0px 7px 0px 0px rgba(50, 50, 50, 0.11);
+  -moz-box-shadow:    0px 7px 0px 0px rgba(50, 50, 50, 0.11);
+  box-shadow:         0px 7px 0px 0px rgba(50, 50, 50, 0.11);*/
+}
+
+/* front pane, placed above back */
+.bubblefront {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.bubbleback {
+  transform: rotateY(180deg);
+}
+
+/*front*/
+.bubblesidea {
+  background: #f7f7f7;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+/*back*/
+.bubblesideb{
+  background:rgba(241, 196, 15,1.0);
+}
+
+/*front word bubble thing*/
+.bubble-front {
+    position: relative;
+    width: 98%;
+    height: 100%;
+    padding: 0;
+    background: rgba(241, 196, 15, 1.0);
+}
+
+.bubble-front:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 38px;
+    border-style: solid;
+    border-width: 29px 29px 0;
+    border-color: rgba(241, 196, 15, 1.0) transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+}
+
+/*back word bubble thing*/
+.bubble-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-size: 100%;
+    background-color: #ffffff;
+}
+
+.bubble-back:after {
+    content: "";
+    position: absolute;
+    bottom: -29px;
+    left: 130px;
+    border-style: solid;
+    border-width: 29px 29px 0;
+    border-color: #ffffff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    display: none;
+}
+
+.center {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+  }
+
+.whatdo{
+  position:absolute;
+  font-family:Raleway,sans-serif;
+  font-weight:100;
+  color:#ffffff;
+  padding-top:550px;
+  padding-left:500px;
+}
+
+.hithere {
+  animation: hithere 3s ease infinite;
+  width: 100%;
+}
+@keyframes hithere {
+  30% { transform: scale(1.01); }
+  40%, 60% { transform: rotate(-3deg) scale(1.01); }
+  50% { transform: rotate(3deg) scale(1.01); }
+  70% { transform: rotate(0deg) scale(1.01); }
+  100% { transform: scale(1); }
+}
